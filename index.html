@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>My Portfolio - Prasham Parmar</title>
+
+<style>
+/* ---------------- GLOBAL STYLE ---------------- */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #0a0f24, #000000);
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+section {
+    padding: 50px 10%;   /* Reduced from 80px → 50px */
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: cyan;
+}
+
+/* ---------------- NAVBAR ---------------- */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(15px);
+    background: rgba(0, 0, 0, 0.4);
+    padding: 15px 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+nav .logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: cyan;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    font-size: 15px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: cyan;
+}
+
+/* ---------------- HERO ---------------- */
+.hero {
+    min-height: 92vh; /* Slightly smaller height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Reduced gap */
+}
+
+.hero img {
+    width: 240px;
+    height: 240px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 0 25px cyan;
+}
+
+.hero-text h1 {
+    font-size: 42px;
+}
+
+.hero-text h2 {
+    font-size: 22px;
+    margin-top: -10px;
+    color: #aaa;
+}
+
+/* ---------------- CARDS (Box spacing fixed) ---------------- */
+.card {
+    background: rgba(255,255,255,0.08);
+    padding: 28px;  /* reduced from 35px */
+    border-radius: 20px;
+    margin-bottom: 25px; /* reduced from 40px */
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 0 20px rgba(0,255,255,0.15);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.015);
+    box-shadow: 0 0 35px rgba(0,255,255,0.3);
+}
+
+/* ---------------- SKILLS ---------------- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px,1fr));
+    gap: 15px; /* Smaller gap */
+}
+
+.skill-box {
+    padding: 15px;
+    border-radius: 12px;
+    background: rgba(0,0,0,0.5);
+    text-align: center;
+    border: 1px solid cyan;
+    box-shadow: 0 0 8px cyan;
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+    text-align: center;
+    padding: 18px;
+    background: rgba(0,0,0,0.6);
+    margin-top: 20px;
+}
+</style>
+
+</head>
+<body>
+
+<!-- ---------------- NAVBAR ---------------- -->
+<nav>
+    <div class="logo">PRASHAM</div>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#swot">SWOT</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- ---------------- HERO ---------------- -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <img src="WhatsApp Image 2025-11-18 at 23.08.39_e328e411.jpg" alt="My Photo">
+        <div class="hero-text">
+            <h1>Hi, I'm <span style="color: cyan;">Prasham Parmar</span></h1>
+            <h2>B.Tech CSE Student | Developer | Tech Learner</h2>
+        </div>
+    </div>
+</section>
+
+<!-- ---------------- ABOUT ---------------- -->
+<section id="about">
+    <div class="card">
+        <h1>About Me</h1>
+        <p>
+            I am a B.Tech Computer Science student at PDEU with strong interest in programming, web development, system design, cyber security, and advanced technology learning. I love exploring new concepts and building real-world projects.
+        </p>
+    </div>
+</section>
+
+<!-- ---------------- EDUCATION ---------------- -->
+<section id="education">
+    <div class="card">
+        <h1>Education</h1>
+        <ul>
+            <li><strong>Pandit Deendayal Energy University</strong> – B.Tech CSE (2022–2026)</li>
+            <li>GSEB Senior Secondary – Science Stream(2020) </li>
+        </ul>
+    </div>
+</section>
+
+<!-- ---------------- SKILLS ---------------- -->
+<section id="skills">
+    <div class="card">
+        <h1>Skills</h1>
+
+        <h3>Programming Languages</h3>
+        <div class="skills-grid">
+            <div class="skill-box">C</div>
+            <div class="skill-box">C++</div>
+            <div class="skill-box">Java</div>
+            <div class="skill-box">Python</div>
+        </div>
+
+        <h3 style="margin-top: 20px;">Tools & Technologies</h3>
+        <div class="skills-grid">
+            <div class="skill-box">Git</div>
+            <div class="skill-box">Linux</div>
+            <div class="skill-box">MySQL</div>
+            <div class="skill-box">Networking</div>
+        </div>
+    </div>
+</section>
+
+<!-- ---------------- PROJECTS ---------------- -->
+<section id="projects">
+    <div class="card">
+        <h1>Projects</h1>
+
+        <h3>🔹 Information Security – Modified Playfair Cipher</h3>
+        <p>Created a unique implementation of Playfair Cipher using modified algorithm in C.</p>
+
+        <h3>🔹 Compiler Design – Lex & YACC Programs</h3>
+        <p>Built lexical analyzers, parsers, and recursive descent parsers for various grammars.</p>
+
+        <h3>🔹 Networking – TCP & UDP Chat Applications (Java)</h3>
+        <p>Developed client-server models with extended functionalities.</p>
+
+        <h3>🔹 Web Apps – Real Estate Broker System</h3>
+        <p>Built using JSP, Servlets, Hibernate, JSTL, and MySQL.</p>
+    </div>
+</section>
+
+<!-- ---------------- SWOT ---------------- -->
+<section id="swot">
+    <div class="card">
+        <h1>SWOT Analysis</h1>
+        <h3>Strengths</h3>
+        <ul>
+            <li>Quick learner</li>
+            <li>Dedicated & disciplined</li>
+            <li>Strong programming interest</li>
+        </ul>
+
+        <h3>Weaknesses</h3>
+        <ul>
+            <li>Overthinking</li>
+            <li>Work-anxiety during deadlines</li>
+        </ul>
+
+        <h3>Opportunities</h3>
+        <ul>
+            <li>Growing IT and AI industry</li>
+            <li>Great scope in Cybersecurity and Software development</li>
+        </ul>
+
+        <h3>Threats</h3>
+        <ul>
+            <li>High competition</li>
+            <li>Fast-changing technologies</li>
+        </ul>
+    </div>
+</section>
+
+<!-- ---------------- CONTACT ---------------- -->
+<section id="contact">
+    <div class="card">
+        <h1>Contact Me</h1>
+        <p>Email: <a href="mailto:prasham.parmar05@gmail.com">prasham.parmar05@gmai</a></p>
+        <p>Phone: +91 9316495449</p>
+        <p>Location: Ahmedabad, Gujarat, India</p>
+    </div>
+</section>
+
+<footer>
+    © 2025 Prasham Parmar — All Rights Reserved
+</footer>
+
+<script>
+// Smooth scrolling
+document.querySelectorAll("nav ul li a").forEach(link => {
+    link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        window.scrollTo({
+            top: target.offsetTop - 60,
+            behavior: "smooth"
+        });
+    });
+});
+</script>
+
+</body>
+</html>
